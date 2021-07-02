@@ -1,17 +1,11 @@
+acceptablewords = ['yes','yeah', 'yh', 'yea', 'no', 'nay', 'nah']
 input('Anyone there?')
 print('hello werld')
+print('...')
 answer = input('did I spell that right?' )
 answer = answer.lower()
 
-# def understandanswer(answer):
-#     if answer == 'yes' or 'yeah' or 'yh' or 'yea' or 'no':
-#         return True
-#     else:
-#         return False
-
-# print(understandanswer(answer))
-
-if answer != 'yes' or 'no':
+if answer not in acceptablewords:
     answer = input("I didn't understand, could you repeat that?")
 
 if answer == 'yes':
