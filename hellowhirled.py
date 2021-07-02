@@ -1,15 +1,22 @@
-input('Anyone there?')
+# input('Anyone there?')
 print('hello whirled')
 answer = input('did I spell that right?' )
 answer = answer.lower()
 
-if not bool(answer=='yes') or not bool(answer=='no'):
-    answer = input("I didn't understand, could you repeat that?")
+def understandanswer(answer):
+    if answer == 'yes' or 'yeah' or 'yh' or 'yea' or 'no':
+        return True
+    else:
+        return False
 
-if answer == 'yes':
-    print('Okay, thanks')
-if answer == 'no':
-        print('sorry, i meant to say "hello world"')
+print(understandanswer(answer))
+
+# if not bool(answer):
+#     answer = input("I didn't understand, could you repeat that?")
+
+# if answer == 'yes':
+#     print('Okay, thanks')
+# elif answer == 'no':
+#         print('sorry, i meant to say "hello world"')
 # else:
-#     print("I didn't understand, can you repeat that?")
-#     answer = input
+#     print("oops")
